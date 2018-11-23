@@ -25,6 +25,17 @@ class Website extends connect(store)(PageViewElement) {
     return html`
       ${SharedStyles}
       <section>
+        <h2>Technology</h2>
+        <p><code>this</code> application is built with <a href="https://www.polymer-project.org" target="_blank">Polymer WebComponents</a>. The custom elements extend from Polymers <code>&lt;lit-element&gt;</code> which has some nifty functionality regarding rendering. There is a state manager to centralize and manipulate the data. For this we use Redux, you can debug the current state with <a href="http://extension.remotedev.io/" target="_blank">Redux DevTools</a> if interested.</p>
+      </section>
+      <section>
+        <h3>Welcome</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac nisi orci. Maecenas sollicitudin diam in diam efficitur cursus. Morbi sollicitudin in justo tincidunt placerat. Integer tincidunt elementum nisi, eu ornare dolor lacinia eget. Fusce pulvinar massa eget odio placerat, commodo molestie ipsum tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse porttitor id purus eu cursus. Suspendisse arcu nulla, mattis vel hendrerit et, malesuada a elit. Nam at diam ornare, aliquet est sed, malesuada metus. Cras nec enim vel nibh tincidunt euismod ut et enim. Etiam pharetra eros in sodales iaculis. Duis sagittis urna et cursus mollis. Cras tempor rutrum est. Praesent sollicitudin ligula at laoreet placerat. Praesent tortor dui, semper in sapien non, pharetra luctus turpis.</p>
+      </section>
+      <section>
+        <p>Vestibulum at est ex. Aenean id ligula id nibh dictum laoreet. Etiam non semper erat. Pellentesque eu justo rhoncus diam vulputate facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat metus ex, vel fringilla massa tincidunt sit amet. Nunc facilisis bibendum tristique. Mauris commodo, dolor vitae dapibus fermentum, odio nibh viverra lorem, eu cursus diam turpis et sapien. Nunc suscipit tortor a ligula tincidunt, id hendrerit tellus sollicitudin.</p>
+      </section>
+      <section>
         <h2>Redux example: simple counter</h2>
         <div class="circle">${this._value}</div>
         <p>This page contains a reusable <code>&lt;counter-element&gt;</code>. The

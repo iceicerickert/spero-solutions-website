@@ -27,6 +27,7 @@ jobs:
         - npm install -g firebase-tools
       script:
         - npm run build:firebase
+        - npm run testding
       after_success:
         - npm run deploy:firebase:travis
 env:

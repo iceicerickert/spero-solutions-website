@@ -34,9 +34,9 @@ describe('routing tests', function() {
     await page.goto(`${appUrl}`);
     await page.waitForSelector('my-app', {visible: true});
 
-    await testNavigation(page, 'view2', 'View Two');
-    await testNavigation(page, 'view3', 'View Three');
-    await testNavigation(page, 'view1', 'View One');
+    await testNavigation(page, 'website', 'this website');
+    await testNavigation(page, 'cv', 'CV');
+    await testNavigation(page, 'about', 'About me');
   });
 
   it('the page selector switches pages in a different way', async function() {
@@ -59,9 +59,9 @@ describe('routing tests', function() {
       console.log(window.deepQuerySelector);
     });
 
-    await testNavigationInADifferentWay(page, 'view2', 'View Two');
-    await testNavigationInADifferentWay(page, 'view3', 'View Three');
-    await testNavigationInADifferentWay(page, 'view1', 'View One');
+    await testNavigationInADifferentWay(page, 'website', 'this website');
+    await testNavigationInADifferentWay(page, 'cv', 'CV');
+    await testNavigationInADifferentWay(page, 'about', 'About me');
   });
 });
 

@@ -61,10 +61,12 @@ async function generateBaselineScreenshots(page) {
     await page.goto('http://127.0.0.1:4444/');
     await page.screenshot({path: `${baselineDir}/${prefix}/index.png`});
     // Views.
-    for (let i = 1; i <= 3; i++) {
-      await page.goto(`http://127.0.0.1:4444/view${i}`);
-      await page.screenshot({path: `${baselineDir}/${prefix}/view${i}.png`});
-    }
+    await page.goto(`http://127.0.0.1:4444/about`);
+    await page.screenshot({path: `${baselineDir}/${prefix}/about.png`});
+    await page.goto(`http://127.0.0.1:4444/website`);
+    await page.screenshot({path: `${baselineDir}/${prefix}/website.png`});
+    await page.goto(`http://127.0.0.1:4444/cv`);
+    await page.screenshot({path: `${baselineDir}/${prefix}/cv.png`});
     // 404.
     await page.goto('http://127.0.0.1:4444/batmanNotAView');
     await page.screenshot({path: `${baselineDir}/${prefix}/batmanNotAView.png`});

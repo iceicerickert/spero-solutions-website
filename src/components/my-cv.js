@@ -23,7 +23,7 @@ import { SharedStyles } from './shared-styles.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
 import { addToCartIcon } from './my-icons.js';
 
-class MyView3 extends connect(store)(PageViewElement) {
+class CV extends connect(store)(PageViewElement) {
   render() {
     return html`
       ${SharedStyles}
@@ -99,4 +99,4 @@ class MyView3 extends connect(store)(PageViewElement) {
   }
 }
 
-window.customElements.define('my-view3', MyView3);
+window.customElements.define('my-cv', CV);

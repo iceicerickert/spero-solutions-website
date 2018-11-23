@@ -25,25 +25,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../node_modules/wct-browser-legacy/browser.js"></script>
 
     <!-- Import the element to test -->
-    <script type="module" src="../../src/components/my-view1.js"></script>
-    <script type="module" src="../../src/components/my-view2.js"></script>
-    <script type="module" src="../../src/components/my-view3.js"></script>
+    <script type="module" src="../../src/components/my-about.js"></script>
+    <script type="module" src="../../src/components/my-website.js"></script>
+    <script type="module" src="../../src/components/my-cv.js"></script>
     <script type="module" src="../../src/components/my-view404.js"></script>
   </head>
   <body>
-    <test-fixture id="view1">
+    <test-fixture id="about">
       <template>
-        <my-view1 active></my-view1>
+        <my-about active></my-about>
       </template>
     </test-fixture>
-    <test-fixture id="view2">
+    <test-fixture id="website">
       <template>
-        <my-view2 active></my-view2>
+        <my-website active></my-website>
       </template>
     </test-fixture>
-    <test-fixture id="view3">
+    <test-fixture id="cv">
       <template>
-        <my-view3 active></my-view3>
+        <my-cv active></my-cv>
       </template>
     </test-fixture>
     <test-fixture id="view404">
@@ -57,18 +57,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       import {axeReport} from 'pwa-helpers/axe-report.js';
 
       suite('views a11y tests', function() {
-        test('my-view1', function() {
-          const el = fixture('view1');
+        test('my-about', function() {
+          const el = fixture('about');
           return axeReport(el);
         });
 
-        test('my-view2', function() {
-          const el = fixture('view2');
+        test('my-website', function() {
+          const el = fixture('website');
           return axeReport(el);
         });
 
-        test('my-view3', function() {
-          const el = fixture('view3');
+        test('my-cv', function() {
+          const el = fixture('cv');
           return axeReport(el);
         });
 

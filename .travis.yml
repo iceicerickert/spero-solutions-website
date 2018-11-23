@@ -45,4 +45,4 @@ jobs:
       script:
         - npm run build:firebase
       after_success:
-        - npm run build:firebase -- --token $FIREBASE_TOKEN
+        - npm run deploy:firebase -- --token $FIREBASE_TOKEN

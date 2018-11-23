@@ -28,7 +28,8 @@ jobs:
       script:
         - npm run build:firebase
       after_success:
-        - npm run deploy:firebase -- --token "$FIREBASE_TOKEN"
+        - npm run deploy:firebase:travis
 env:
   global:
   - secure: "AasjLH8Mm+4NgIAicMyMAqSUnIjcjRx9TwTOxsPnx07ps6OBlThbUX29wVLcQpjcyz2qSotSnyzseH1Oyn9XWfPWNcYWZxV22S8jrSZvxzNHT2y8yChkfKy4xYLS/IIV4w5SNUtIideGda9s3J4ZBdYeLukT/1R0mi3OcB3N+n9ABRGZ2W27yBzILYOTspPlTakSiY4Pjhx2eB/AaId2ZK901x2NIC+/TR1qRmw4PVa+iBVYpnJWIi3DXlmZ5U4mKULzeVu+c+pB/FLHpXvva7xN62K+NtDRZtLhFTh+3xobK/Z+OeP6qd9l9NkLqAnZVaEeEmt3axma8m13WY6Oju5rnLEBj7Cw1qO+TFzE0fBISXn3I5cEWMb2kVhm0R1lgwlutqprPxlroPnEfMEDkvmnxu7A2ZyxK6ltweYodyBSga8HreRs0nXba330J9dH7pSn3ZYZeRArjqlmnUGEeK8nW2DkQtWsifAtFCrYD40PNDFA03gTgxK9dlmCzPYN5FTRRWNCvbOtWUyKkkGRFGoGnopBZHcQ0pIiEf+kIkSros5vLpjVyLVv5HDWdGImy+q8t+HmcW/qh2aMbtquaTRl10aoi1O+1TyrLJ03iTSrMR42fhAxaV/lPrkwSmecamxcMOpbzAiQvuUmMTuDbarsSp0ozY747Ce9EvAp1LI="
+  - TESTDING=CORRECT

@@ -4,7 +4,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/about.js": {
+    "src/components/my-about.js": {
       "type": "script",
       "weight": 1
     },
@@ -18,7 +18,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/about.js": {
+    "src/components/my-about.js": {
       "type": "script",
       "weight": 1
     },

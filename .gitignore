@@ -5,4 +5,5 @@ _site/
 .firebase/
 .DS_Store
 .sonarlint
-functions/reports
+reports/*.html
+reports/*.json

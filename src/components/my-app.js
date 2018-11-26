@@ -146,6 +146,14 @@ class MyApp extends connect(store)(LitElement) {
         text-align: center;
       }
 
+      .footer-text > a {
+        color: var(--app-light-text-color);
+      }
+
+      .footer-text > a[selected] {
+        color: var(--app-light-text-color);
+      }
+
       /* Wide layout: when the viewport width is bigger than 460px, layout
       changes to a wide layout. */
       @media (min-width: 460px) {
@@ -203,7 +211,7 @@ class MyApp extends connect(store)(LitElement) {
     </main>
 
     <footer>
-      <p>Made with &hearts; by the Polymer team.</p>
+      <p class="footer-text">Spero Solutions, <a href="mailto:web@spero.solutions">web@spero.solutions</a></p>
     </footer>
 
     <snack-bar ?active="${this._snackbarOpened}">

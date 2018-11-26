@@ -1,26 +1,10 @@
 import { html } from '@polymer/lit-element';
 import { PageViewElement } from './page-view-element.js';
-import { connect } from 'pwa-helpers/connect-mixin.js';
-
-// This element is connected to the Redux store.
-import { store } from '../store.js';
-
-// These are the actions needed by this element.
-import { increment, decrement } from '../actions/counter.js';
-
-// We are lazy loading its reducer.
-import counter from '../reducers/counter.js';
-store.addReducers({
-  counter
-});
-
-// These are the elements needed by this element.
-import './counter-element.js';
 
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-class Website extends connect(store)(PageViewElement) {
+class Website extends PageViewElement {
   render() {
     return html`
       ${SharedStyles}
@@ -53,36 +37,10 @@ class Website extends connect(store)(PageViewElement) {
           <li>Add this <a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">Progressive Web App</a> (PWA) to your homescreen and it feels like a native app!</li>
         </ul>
       </section>
-      <section>
-        <p>
-          <counter-element value="${this._value}" clicks="${this._clicks}"
-              @counter-incremented="${this._counterIncremented}"
-              @counter-decremented="${this._counterDecremented}">
-          </counter-element>
-        </p>
-      </section>
     `;
   }
 
-  static get properties() { return {
-    // This is the data from the store.
-    _clicks: { type: Number },
-    _value: { type: Number },
-  }}
-
-  _counterIncremented() {
-    store.dispatch(increment());
-  }
-
-  _counterDecremented() {
-    store.dispatch(decrement());
-  }
-
-  // This is called every time something is updated in the store.
-  stateChanged(state) {
-    this._clicks = state.counter.clicks;
-    this._value = state.counter.value;
-  }
+  static get properties() { return {} }
 }
 
 window.customElements.define('my-website', Website);

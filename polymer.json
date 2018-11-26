@@ -7,8 +7,7 @@
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "push-manifest.json",
-    "reports/lighthouse.report.html"
+    "push-manifest.json"
   ],
   "builds": [
     {

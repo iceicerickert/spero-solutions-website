@@ -4,7 +4,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/about.js": {
       "type": "script",
       "weight": 1
     },
@@ -13,12 +13,12 @@
       "weight": 1
     }
   },
-  "/view1": {
+  "/about": {
     "src/components/my-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/about.js": {
       "type": "script",
       "weight": 1
     },
@@ -27,12 +27,12 @@
       "weight": 1
     }
   },
-  "/view2": {
+  "/website": {
     "src/components/my-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view2.js": {
+    "src/components/my-website.js": {
       "type": "script",
       "weight": 1
     },
@@ -41,12 +41,12 @@
       "weight": 1
     }
   },
-  "/view3": {
+  "/cv": {
     "src/components/my-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view3.js": {
+    "src/components/my-cv.js": {
       "type": "script",
       "weight": 1
     },

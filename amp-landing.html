@@ -1,0 +1,152 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This is the AMP Boilerplate.">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="canonical" href="/">
+    <style amp-custom>
+    /* Add your styles here */
+      :host {
+        display: block;
+        box-sizing: border-box;
+        --app-primary-color: #E91E63;
+        --app-secondary-color: #293237;
+        --app-dark-text-color: var(--app-secondary-color);
+        --app-light-text-color: white;
+        --app-section-even-color: #f7f7f7;
+        --app-section-odd-color: white;
+
+        --app-header-background-color: white;
+        --app-header-text-color: var(--app-dark-text-color);
+        --app-header-selected-color: var(--app-primary-color);
+
+        --app-drawer-background-color: var(--app-secondary-color);
+        --app-drawer-text-color: var(--app-light-text-color);
+        --app-drawer-selected-color: #78909C;
+      }
+      
+      body {
+        margin: 0;
+        /* This is a font-stack that tries to use the system-default sans-serifs first */
+        font-family: Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -webkit-touch-callout: none;
+      }
+
+      h1 {
+        font-family: 'Pacifico';
+        text-transform: lowercase;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        color: #293237;
+        padding: 0 16px;
+        margin: 16px 0;
+      }
+
+      div.header {
+        border-bottom: 1px solid #eee;
+      }
+
+      section {
+        padding: 24px;
+        background: var(--app-section-odd-color);
+      }
+
+      section > * {
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      section:nth-of-type(even) {
+        background: var(--app-section-even-color);
+      }
+
+      a.button {
+        display: table;
+        text-decoration: none;
+        line-height: 30px;
+        padding: 4px 24px;
+        color: #E91E63;
+        border-bottom: 4px solid #E91E63;
+      }
+
+      h2 {
+        font-size: 24px;
+        text-align: center;
+        color: var(--app-dark-text-color);
+      }
+
+      @media (min-width: 460px) {
+        h2 {
+          font-size: 36px;
+        }
+      }
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+    <title>Spero Solutions</title>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Webpage",
+        "url": "https://spero.solutions",
+        "name": "Spero Solutions",
+        "headline": "Spero Solutions",
+        "description": "Based in the Netherlands",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://spero.solutions"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Spero Solutions",
+          "logo": {
+            "url": "https://spero.solutions/esm-bundled/images/manifest/icon-72x72.png",
+            "width": 72,
+            "height": 72,
+            "@type": "ImageObject"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://spero.solutions/esm-bundled/images/manifest/icon-192x192.png",
+          "width": 192,
+          "height": 192
+        }
+      }
+      </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Spero Solutions</h1>
+    </div>
+    <section>
+      <h2>Welcome</h2>
+      <p>Spero Solution is a small company providing services as Web Development, Backend Development and Test Engineering.</p>
+      <p>This website uses modern web technologies which are explained on this page. You are now viewing a precached version by Google which was loaded while crawling through the results, in the meantime I have preloaded the full website for an optimal transistion.</p>
+      <p>You can read all about me and the website by following the link.</p>
+    </section>
+    <section>
+      <a class="button" href="/">Find out everything...</a>
+    </section>
+    <amp-install-serviceworker src="/service-worker.js"
+                               data-iframe-src="/esm-bundled/amp-install-sw.html"
+                               data-no-service-worker-fallback-url-match=".*"
+                               data-no-service-worker-fallback-shell-url="/"
+                               layout="nodisplay">
+    </amp-install-serviceworker>
+  </body>
+</html>

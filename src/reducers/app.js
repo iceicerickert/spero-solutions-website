@@ -13,7 +13,10 @@ const INITIAL_STATE = {
   snackbarOpened: false,
 };
 
-const app = (state = INITIAL_STATE, action) => {
+const app = (state, action) => {
+  if (!state) {
+    state = INITIAL_STATE;
+  }
   switch (action.type) {
     case UPDATE_PAGE:
       return {

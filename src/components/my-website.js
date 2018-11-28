@@ -22,6 +22,7 @@ class Website extends PageViewElement {
         <h4>Performance and standards</h4>
         <p><a href="https://www.webpagetest.org/easy" target="_blank">Webpagetest</a> does some performance testing on a real Moto G4 device on a slow 3G network. It gives you some insights on how <code>this</code> page performs.</p>
         <p><a href="https://www.webpagetest.org/result/181126_RR_e130ae40a2aa84613167d0b9d72e8c01/" target="_blank">Click here</a> to view the results of <code>this</code> page. You can click re-run to have give it another go! <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Lighouse</a> audits are also done on production environment. They can be viewed from the same link or from <a href="https://www.webpagetest.org/lighthouse.php?test=181126_RR_e130ae40a2aa84613167d0b9d72e8c01&run=2" target="_blank">here</a>.</p>
+        <p><a href="https://sonarcloud.io/" target="_blank">Sonarcloud</a> is used for code analysis, the <a href="https://sonarcloud.io/dashboard?id=spero-solutions-website" target="_blank">current state</a> of <code>this</code> website is openly available.</p>
         <p>Some other checks or audits of <code>this</code> page: <a href="https://hstspreload.org/?domain=spero.solutions" target="_blank">HSTS</a>, <a href="https://www.ssllabs.com/ssltest/analyze.html?d=spero.solutions&latest" target="_blank">SSL Labs</a>, <a href="https://webhint.io/#scanner-input" target="_blank">webhint</a>.</p>
       </section>
       <section>

@@ -31,6 +31,12 @@ jobs:
       script:
       - npm run build:prpl-server
       - npm run test:lighthouse
+    - stage: test
+      os: linux
+      addons:
+        sonarcloud:
+          organization: "iceicerickert-github"
+      script: sonar-scanner
     - stage: deploy
       node_js: '10'
       branches:

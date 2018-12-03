@@ -33,20 +33,20 @@ class MyApp extends connect(store)(LitElement) {
         --app-drawer-width: 256px;
         display: block;
 
-        --app-primary-color: #E91E63;
-        --app-secondary-color: #293237;
+        --app-primary-color: #007098;
+        --app-secondary-color: #353535;
         --app-dark-text-color: var(--app-secondary-color);
-        --app-light-text-color: white;
-        --app-section-even-color: #f7f7f7;
-        --app-section-odd-color: white;
+        --app-light-text-color: #ffffff;
+        --app-section-even-color: #f3f3f3;
+        --app-section-odd-color: #ffffff;
 
-        --app-header-background-color: white;
+        --app-header-background-color: #ffffff;
         --app-header-text-color: var(--app-dark-text-color);
         --app-header-selected-color: var(--app-primary-color);
 
         --app-drawer-background-color: var(--app-secondary-color);
         --app-drawer-text-color: var(--app-light-text-color);
-        --app-drawer-selected-color: #78909C;
+        --app-drawer-selected-color: #03a1da;
       }
 
       app-header {
@@ -112,6 +112,7 @@ class MyApp extends connect(store)(LitElement) {
       .drawer-list > a {
         display: block;
         text-decoration: none;
+        font-weight: 700;
         color: var(--app-drawer-text-color);
         line-height: 40px;
         padding: 0 24px;
@@ -119,6 +120,10 @@ class MyApp extends connect(store)(LitElement) {
 
       .drawer-list > a[selected] {
         color: var(--app-drawer-selected-color);
+      }
+
+      app-drawer {
+        z-index: 1;
       }
 
       /* Workaround for IE11 displaying <main> as inline */
@@ -152,6 +157,12 @@ class MyApp extends connect(store)(LitElement) {
 
       .footer-text > a[selected] {
         color: var(--app-light-text-color);
+      }
+
+      img.logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 24px;
       }
 
       /* Wide layout: when the viewport width is bigger than 460px, layout
@@ -197,6 +208,7 @@ class MyApp extends connect(store)(LitElement) {
     <app-drawer .opened="${this._drawerOpened}"
         @opened-changed="${this._drawerOpenedChanged}">
       <nav class="drawer-list">
+        <a href="/"><img class="logo" src="images/manifest/icon-96x96.png" alt="logo" width="96" height="96"></a>
         <a ?selected="${this._page === 'about'}" href="/about">About me</a>
         <a ?selected="${this._page === 'website'}" href="/website"><code>this</code> website</a>
         <a ?selected="${this._page === 'cv'}" href="/cv">CV</a>

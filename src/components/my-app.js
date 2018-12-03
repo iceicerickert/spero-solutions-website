@@ -72,7 +72,7 @@ class MyApp extends connect(store)(LitElement) {
         /* In the narrow layout, the toolbar is offset by the width of the
         drawer button, and the text looks not centered. Add a padding to
         match that button */
-        padding-right: 44px;
+        padding-right: 20px;
       }
 
       .toolbar-list {
@@ -160,7 +160,7 @@ class MyApp extends connect(store)(LitElement) {
         color: var(--app-primary-color-light);
       }
 
-      img.logo {
+      img.logo-menu {
         display: block;
         margin: 0 auto;
         margin-bottom: 24px;
@@ -185,6 +185,7 @@ class MyApp extends connect(store)(LitElement) {
         need to offset the title */
         [main-title] {
           padding-right: 0px;
+          padding-left: 24px;
           font-size: 26px;
         }
       }
@@ -195,6 +196,7 @@ class MyApp extends connect(store)(LitElement) {
       <app-toolbar class="toolbar-top">
         <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
         <div main-title>${this.appTitle}</div>
+        <img class="logo-header-mobile" src="images/manifest/icon-24x24.png" alt="logo" width="24" height="24">
       </app-toolbar>
 
       <!-- This gets hidden on a small screen-->
@@ -209,7 +211,7 @@ class MyApp extends connect(store)(LitElement) {
     <app-drawer .opened="${this._drawerOpened}"
         @opened-changed="${this._drawerOpenedChanged}">
       <nav class="drawer-list">
-        <a href="/"><img class="logo" src="images/manifest/icon-96x96.png" alt="logo" width="96" height="96"></a>
+        <a href="/"><img class="logo-menu" src="images/manifest/icon-96x96.png" alt="logo" width="96" height="96"></a>
         <a ?selected="${this._page === 'about'}" href="/about">About me</a>
         <a ?selected="${this._page === 'website'}" href="/website"><code>this</code> website</a>
         <a ?selected="${this._page === 'cv'}" href="/cv">CV</a>

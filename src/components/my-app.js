@@ -65,9 +65,9 @@ class MyApp extends connect(store)(LitElement) {
       }
 
       [main-title] {
-        font-family: 'Pacifico';
-        text-transform: lowercase;
-        font-size: 30px;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 22px;
         /* In the narrow layout, the toolbar is offset by the width of the
         drawer button, and the text looks not centered. Add a padding to
         match that button */
@@ -173,6 +173,7 @@ class MyApp extends connect(store)(LitElement) {
         need to offset the title */
         [main-title] {
           padding-right: 0px;
+          font-size: 26px;
         }
       }
     </style>

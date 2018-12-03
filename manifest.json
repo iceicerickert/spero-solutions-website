@@ -8,6 +8,16 @@
   "background_color": "#f3f3f3",
   "icons": [
     {
+      "src": "images/manifest/icon-44x44.png",
+      "sizes": "44x44",
+      "type": "image/png"
+    },
+    {
+      "src": "images/manifest/icon-24x24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
       "src": "images/manifest/icon-48x48.png",
       "sizes": "48x48",
       "type": "image/png"

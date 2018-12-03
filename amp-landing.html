@@ -17,20 +17,21 @@
       :host {
         display: block;
         box-sizing: border-box;
-        --app-primary-color: #E91E63;
-        --app-secondary-color: #293237;
+        --app-primary-color: #007098;
+        --app-primary-color-light: #03a1da;
+        --app-secondary-color: #353535;
         --app-dark-text-color: var(--app-secondary-color);
-        --app-light-text-color: white;
-        --app-section-even-color: #f7f7f7;
-        --app-section-odd-color: white;
+        --app-light-text-color: #ffffff;
+        --app-section-even-color: #f3f3f3;
+        --app-section-odd-color: #ffffff;
 
-        --app-header-background-color: white;
+        --app-header-background-color: #ffffff;
         --app-header-text-color: var(--app-dark-text-color);
         --app-header-selected-color: var(--app-primary-color);
 
         --app-drawer-background-color: var(--app-secondary-color);
         --app-drawer-text-color: var(--app-light-text-color);
-        --app-drawer-selected-color: #78909C;
+        --app-drawer-selected-color: var(--app-primary-color-light);
       }
       
       body {
@@ -48,7 +49,7 @@
         font-style: normal;
         font-size: 22px;
         text-align: center;
-        color: #293237;
+        color: #353535;
         padding: 0 16px;
         margin: 16px 0;
       }
@@ -59,7 +60,7 @@
 
       section {
         padding: 24px;
-        background: var(--app-section-odd-color);
+        background: #ffffff;
       }
 
       section > * {
@@ -69,7 +70,7 @@
       }
 
       section:nth-of-type(even) {
-        background: var(--app-section-even-color);
+        background: #f3f3f3;
       }
 
       a.button {
@@ -77,15 +78,23 @@
         text-decoration: none;
         line-height: 30px;
         padding: 4px 24px;
-        color: #E91E63;
-        border-bottom: 4px solid #E91E63;
+        color: #007098;
+        border-bottom: 4px solid #007098;
+      }
+
+      a {
+        color: #03a1da;
+      }
+
+      a:visited {
+        color: #007098;
       }
 
       h2 {
         font-size: 20px;
         font-weight: 700;
         text-align: center;
-        color: var(--app-dark-text-color);
+        color: #353535;
       }
 
       @media (min-width: 460px) {
@@ -146,7 +155,7 @@
     <section>
         <p>This website uses modern web technologies which are explained on this page. You are now viewing a precached version by Google which was loaded while you were crawling through the results. In the meantime, the full web application has been preloaded for an optimal transition. The technology used for this is called <a href="https://www.ampproject.org/" target="_blank">Accelerated Mobile Pages</a> (AMP). You can <a href="https://search.google.com/test/amp?utm_source=gws&utm_medium=onebox&utm_campaign=suit&url=https://spero.solutions/esm-bundled/amp-landing.html" target="_blank">click here</a> to see if this page is a valid AMP page.</p>
     </section>
-    <section></section>
+    <br>
     <amp-install-serviceworker src="/service-worker.js"
                                data-iframe-src="/esm-bundled/amp-install-sw.html"
                                data-no-service-worker-fallback-url-match=".*"

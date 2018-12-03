@@ -29,6 +29,14 @@ export const SharedStyles = html`
     color: var(--app-dark-text-color);
   }
 
+  a {
+    color: var(--app-primary-color-light);
+  }
+
+  a:visited {
+    color: var(--app-primary-color);
+  }
+
   @media (min-width: 460px) {
     h2 {
       font-size: 22px;

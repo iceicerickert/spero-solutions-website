@@ -34,6 +34,7 @@ class MyApp extends connect(store)(LitElement) {
         display: block;
 
         --app-primary-color: #007098;
+        --app-primary-color-light: #03a1da;
         --app-secondary-color: #353535;
         --app-dark-text-color: var(--app-secondary-color);
         --app-light-text-color: #ffffff;
@@ -46,7 +47,7 @@ class MyApp extends connect(store)(LitElement) {
 
         --app-drawer-background-color: var(--app-secondary-color);
         --app-drawer-text-color: var(--app-light-text-color);
-        --app-drawer-selected-color: #03a1da;
+        --app-drawer-selected-color: var(--app-primary-color-light);
       }
 
       app-header {
@@ -152,11 +153,11 @@ class MyApp extends connect(store)(LitElement) {
       }
 
       .footer-text > a {
-        color: var(--app-light-text-color);
+        color: var(--app-primary-color-light);
       }
 
       .footer-text > a[selected] {
-        color: var(--app-light-text-color);
+        color: var(--app-primary-color-light);
       }
 
       img.logo {

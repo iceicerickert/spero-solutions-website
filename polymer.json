@@ -2,14 +2,16 @@
   "entrypoint": "index.html",
   "shell": "src/components/my-app.js",
   "sources": [
-    "images/**/*",
-    "amp-landing.html",
-    "amp-install-sw.html"
+    "images/**/*"
   ],
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "push-manifest.json"
+    "push-manifest.json",
+    "robots.txt",
+    "sitemap.xml",
+    "amp-landing.html",
+    "amp-install-sw.html"
   ],
   "builds": [
     {

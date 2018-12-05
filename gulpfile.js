@@ -43,7 +43,15 @@ gulp.task('prpl-server:build', () => {
  */
 gulp.task('firebase', () => {
   // These are the files needed by PRPL Server, that are going to be moved to the functions folder
-  const filesToMove = [ 'build/polymer.json', 'build/**/index.html', 'build/**/push-manifest.json' ];
+  const filesToMove = [
+    'build/polymer.json',
+    'build/**/index.html',
+    'build/**/push-manifest.json',
+    'build/**/robots.txt',
+    'build/**/sitemap.xml',
+    'build/**/amp-landing.html',
+    'build/**/amp-install-sw.html'
+  ];
   // Delete the build folder inside the functions folder
   return del('functions/build')
     .then(() =>

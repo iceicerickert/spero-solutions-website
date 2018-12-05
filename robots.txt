@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.spero.solutions/sitemap.xml
+Sitemap: https://spero.solutions/esm-bundled/sitemap.xml

@@ -39,30 +39,30 @@ describe('routing tests', function() {
     await testNavigation(page, 'about', 'About me');
   });
 
-  it('the page selector switches pages in a different way', async function() {
-    await page.goto(`${appUrl}`);
-    await page.waitForSelector('my-app', {visible: true});
+  // it('the page selector switches pages in a different way', async function() {
+  //   await page.goto(`${appUrl}`);
+  //   await page.waitForSelector('my-app', {visible: true});
 
-    // Setup
-    await page.evaluate(() => {
-      window.deepQuerySelector = function(query) {
-        const parts = query.split('::shadow');
-        let el = document;
-        for (let i = 0; i < parts.length; i++) {
-          el = el.querySelector(parts[i]);
-          if (i % 2 === 0) {
-            el = el.shadowRoot;
-          }
-        }
-        return el === document ? null : el;
-      }
-      console.log(window.deepQuerySelector);
-    });
+  //   // Setup
+  //   await page.evaluate(() => {
+  //     window.deepQuerySelector = function(query) {
+  //       const parts = query.split('::shadow');
+  //       let el = document;
+  //       for (let i = 0; i < parts.length; i++) {
+  //         el = el.querySelector(parts[i]);
+  //         if (i % 2 === 0) {
+  //           el = el.shadowRoot;
+  //         }
+  //       }
+  //       return el === document ? null : el;
+  //     }
+  //     console.log(window.deepQuerySelector);
+  //   });
 
-    await testNavigationInADifferentWay(page, 'website', 'this website');
-    await testNavigationInADifferentWay(page, 'cv', 'CV');
-    await testNavigationInADifferentWay(page, 'about', 'About me');
-  });
+  //   await testNavigationInADifferentWay(page, 'website', 'this website');
+  //   await testNavigationInADifferentWay(page, 'cv', 'CV');
+  //   await testNavigationInADifferentWay(page, 'about', 'About me');
+  // });
 });
 
 async function testNavigation(page, href, linkText) {

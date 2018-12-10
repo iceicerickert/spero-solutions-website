@@ -26,11 +26,6 @@ module.exports = {
     {
       urlPattern: /^https:\/\/www.googletagmanager.com\/gtag\/js\//,
       handler: 'fastest'
-    },
-    {
-      urlPattern: /^https:\/\/www.google-analytics.com\/js\//,
-      handler: 'fastest'
     }
-    
   ]
 };

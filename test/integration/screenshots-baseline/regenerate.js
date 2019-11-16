@@ -65,6 +65,8 @@ async function generateBaselineScreenshots(page) {
     await page.screenshot({path: `${baselineDir}/${prefix}/about.png`});
     await page.goto(`http://127.0.0.1:4444/website`);
     await page.screenshot({path: `${baselineDir}/${prefix}/website.png`});
+    await page.goto(`http://127.0.0.1:4444/cv`);
+    await page.screenshot({path: `${baselineDir}/${prefix}/cv.png`});
     // 404.
     await page.goto('http://127.0.0.1:4444/batmanNotAView');
     await page.screenshot({path: `${baselineDir}/${prefix}/batmanNotAView.png`});

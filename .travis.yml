@@ -7,7 +7,6 @@ jobs:
     - stage: test
       language: node_js
       os: osx
-      osx_image: xcode12
       script: npm run test:integration
     - stage: test
       language: node_js

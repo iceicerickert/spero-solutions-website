@@ -138,7 +138,7 @@ function compareScreenshots(view) {
       const stats = fs.statSync(`${currentDir}/${view}.png`);
       const fileSizeInBytes = stats.size;
       console.log(`📸 ${view}.png => ${fileSizeInBytes} bytes, ${percentDiff}% different`);
-      expect(percentDiff, 'number of different pixels').below(1);
+      expect(percentDiff, 'number of different pixels').below(2);
       resolve();
     }
   });

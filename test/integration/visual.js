@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
-const {startServers} = require('polyserve');
+const {startServer} = require('polyserve');
 const path = require('path');
 const fs = require('fs');
 const PNG = require('pngjs').PNG;
@@ -23,7 +23,7 @@ describe('👀 page screenshots are correct', function() {
   let polyserve, browser, page;
 
   before(async function() {
-    polyserve = await startServers({port:4444, root:path.join(__dirname, '../..'), moduleResolution:'node'});
+    polyserve = await startServer({port:4444, root:path.join(__dirname, '../..'), moduleResolution:'node'});
 
     // Create the test directory if needed.
     if (!fs.existsSync(currentDir)){
@@ -139,7 +139,7 @@ function compareScreenshots(view) {
       const fileSizeInBytes = stats.size;
       console.log(`📸 ${view}.png => ${fileSizeInBytes} bytes, ${percentDiff}% different`);
 
-      expect(numDiffPixels, 'number of different pixels').below(0.1);
+      expect(numDiffPixels, 'number of different pixels').below(1);
       resolve();
     }
   });

@@ -140,7 +140,7 @@ function compareScreenshots(view) {
       console.log(`📸 ${view}.png => ${fileSizeInBytes} bytes, ${percentDiff}% different`);
 
       //diff.pack().pipe(fs.createWriteStream(`${currentDir}/${view}-diff.png`));
-      expect(numDiffPixels, 'number of different pixels').equal(0);
+      expect(numDiffPixels, 'number of different pixels').below(0.1);
       resolve();
     }
   });

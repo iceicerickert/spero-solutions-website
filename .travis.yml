@@ -1,3 +1,4 @@
+os: linux
 dist: xenial
 language: node_js
 cache: npm
@@ -20,18 +21,13 @@ jobs:
       script:
       - npm run test:unit
     - stage: test
-      sudo: required
-      os: linux
-      dist: trusty
       addons:
         chrome: stable
-        firefox: latest
       before_script:
-      - export DISPLAY=:99.0
-      - sh -e /etc/init.d/xvfb start
+      - npm install -g @lhci/cli@0.6.x
       script:
       - npm run build:prpl-server
-      - npm run test:lighthouse
+      - lhci autorun
     - stage: test
       os: linux
       addons:

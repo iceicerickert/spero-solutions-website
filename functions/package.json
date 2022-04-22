@@ -1,7 +1,7 @@
 {
   "name": "functions",
   "engines": {
-    "node": "10"
+    "node": "16.x.x"
   },
   "description": "Cloud Functions for Firebase",
   "scripts": {

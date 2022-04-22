@@ -128,11 +128,11 @@ function compareScreenshots(view) {
 
       // Skip the bottom/rightmost row of pixels, since it seems to be
       // noise on some machines :/
-      const width = img1.width - 1;
-      const height = img1.height - 1;
+      const width = img1.width;
+      const height = img1.height;
 
       const numDiffPixels = pixelmatch(img1.data, img2.data, diff.data,
-          width, height, {threshold: 0.2});
+          width, height, {threshold: 3});
       const percentDiff = numDiffPixels/(width * height)*100;
 
       const stats = fs.statSync(`${currentDir}/${view}.png`);

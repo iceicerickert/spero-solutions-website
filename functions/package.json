@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "cors": "2.8.5",
-    "express": "4.17.1",
-    "firebase-admin": "9.4.1",
-    "firebase-functions": "3.11.0",
+    "express": "4.17.3",
+    "firebase-admin": "^9.4.1",
+    "firebase-functions": "3.20.1",
     "hsts": "2.2.0",
     "prpl-server": "1.4.2",
     "rendertron-middleware": "0.1.5"

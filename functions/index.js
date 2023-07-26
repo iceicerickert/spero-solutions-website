@@ -3,7 +3,7 @@ const prpl = require('prpl-server');
 const express = require('express');
 const rendertron = require('rendertron-middleware');
 const hsts = require('hsts');
-// const cors = require('cors')({origin: true});
+const cors = require('cors')({origin: true});
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(hsts({
   maxAge: 31536000,
   includeSubDomains: true,
   preload: true
-}), (req, res, next) => {
+}), cors, (req, res, next) => {
   req.headers['host'] = 'spero.solutions';
   return rendertronMiddleware(req, res, next);
 });

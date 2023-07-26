@@ -10,6 +10,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "start": "polymer serve",
     "install:functions": "cd functions && npm install",

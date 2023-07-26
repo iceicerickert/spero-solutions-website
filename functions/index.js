@@ -24,6 +24,6 @@ app.use(hsts({
 app.get('/*', prpl.makeHandler('./build', require('./build/polymer.json')));
 
 exports.app = functions
-                .region('europe-west1')
+                .region('us-central1')
                 .https
                 .onRequest(app);

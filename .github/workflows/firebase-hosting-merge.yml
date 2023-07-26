@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
-      - run: npm install -g firebase-tools
+      - run: npm install -g firebase-tools@10.0.0
       - run: npm run install:functions:ci
       - run: npm run build:firebase
       - run: npm run deploy:firebase -- --token '${{ secrets.FIREBASE_TOKEN }}'
